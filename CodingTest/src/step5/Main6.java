@@ -14,13 +14,24 @@ import java.util.Arrays;
 public class Main6 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int n = Integer.parseInt(br.readLine());
-		String[] arr = new String[n];
-		arr = br.readLine().split("");
-		int sum = 0;
+		char[] arr1 = new char[26];
+		int[] arr2 = new int[26];
+		String s = br.readLine();
 		
-		for(String item : arr) 
-			sum += Integer.parseInt(item);
-		System.out.println(sum);
+		for(int i=0;i<26;i++)
+			arr1[i] = (char) (96 + i + 1);
+		
+		for(int i=0;i<26;i++)
+			arr2[i] = -1;
+		
+		for(int i=0;i<s.length();i++) {
+			for(int j=0;j<26;j++) {
+				if(s.charAt(i) == arr1[j] && arr2[j] == -1)
+					arr2[j] = i;
+			}
+		}
+		
+		for(int item : arr2)
+			System.out.print(item + " ");
 	}
 }
