@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /*
-	날짜: 2025/07/10
+	날짜: 2025/07/11
 	이름: 윤종인
 	내용: 백준 4단계 7번 문제 - 과제 안 내신 분..?
 */
