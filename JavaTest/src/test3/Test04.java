@@ -33,8 +33,7 @@ public class Test04 {
 		Student.studentId = 20201000;
 		
 		Student kim = new Student("김유신","국문과",1);
-		kim.studentInfo();
-		
+		kim.studentInfo();	
 		
 		Student lee = new Student("이순신","경제학과",1);
 		lee.studentInfo();
