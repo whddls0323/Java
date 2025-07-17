@@ -25,7 +25,7 @@ public class Student {
 	public void setScore(Subject subject, int score) {
 		
 		for(int i=0;i<subjectCount;i++) {
-			if(subjects[i].equals(subject)) { //배열원소의 subject와 입력된 subject가 같을때
+			if(subjects[i] == subject) { //배열원소의 subject와 입력된 subject가 같을때
 				scores[i] = score;
 				System.out.println(name + " - " + subject.getSubName() + " 점수 입력완료");
 			}
