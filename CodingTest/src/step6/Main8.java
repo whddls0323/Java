@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
 public class Main8 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		double result = 0;
+		double hap1 = 0,hap2 = 0;
 		
 		for(int i=0;i<20;i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
@@ -23,25 +23,34 @@ public class Main8 {
 			String c = st.nextToken();
 			
 			if(c.equals("A+")) {
-				result += b * 4.5;
+				hap1 += b * 4.5;
+				hap2 += b;
 			} else if(c.equals("A0")) {
-				result += b * 4.0;
+				hap1 += b * 4.0;
+				hap2 += b;
 			} else if(c.equals("B+")) {
-				result += b * 3.5;
+				hap1 += b * 3.5;
+				hap2 += b;
 			} else if(c.equals("B0")) {
-				result += b * 3.0;
+				hap1 += b * 3.0;
+				hap2 += b;
 			} else if(c.equals("C+")) {
-				result += b * 2.5;
+				hap1 += b * 2.5;
+				hap2 += b;
 			} else if(c.equals("C0")) {
-				result += b * 2.0;
+				hap1 += b * 2.0;
+				hap2 += b;
 			} else if(c.equals("D+")) {
-				result += b * 1.5;
+				hap1 += b * 1.5;
+				hap2 += b;
 			} else if(c.equals("D0")) {
-				result += b * 1.0;
+				hap1 += b * 1.0;
+				hap2 += b;
 			} else if(c.equals("F")) {
-				result += b * 0.0;
+				hap1 += b * 0.0;
+				hap2 += b;
 			}
 		}
-		System.out.println(result/19);
+		System.out.println(hap1/hap2);
 	}
 }
