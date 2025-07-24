@@ -17,7 +17,7 @@ public class Book {
 		this.isBorrowd = true;
 		
 		if(this.isBorrowd) {
-			System.out.println(this.getTitle() + "이미 대출됨");
+			System.out.println(this.getTitle() + " 이미 대출됨");
 		} else {
 			this.isBorrowd = true;
 			System.out.println("도서대출: " + this.getTitle());
