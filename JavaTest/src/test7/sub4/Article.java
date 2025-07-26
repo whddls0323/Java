@@ -33,14 +33,14 @@ public class Article implements Commentable {
 	public User getUser() {
 		return user;
 	}
-	
-	public List<Comment> getComments() {
-		return comments;
-	}
 
 	@Override
 	public void addComment(Comment comment) {
-		System.out.println(getUser().getUid() + comment.getNo());
 		comments.add(comment);
+	}
+
+	@Override
+	public List<Comment> getComments() {
+		return comments;
 	}
 }
