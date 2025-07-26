@@ -11,14 +11,6 @@ public class Board {
 		this.articles = new ArrayList<>();
 		this.users = new ArrayList<>();
 	}
-	
-	public void addArticle(Article article) {
-		articles.add(article);
-	}
-	
-	public void addUser(User user) {
-		
-	}
 
 	public List<Article> getArticles() {
 		return articles;
@@ -26,5 +18,14 @@ public class Board {
 
 	public List<User> getUsers() {
 		return users;
+	}
+	
+	public void addArticle(Article article) {
+		articles.add(article);
+		addUser(article.getUser());
+	}
+	
+	public void addUser(User user) {
+		users.add(user);
 	}
 }
