@@ -8,24 +8,24 @@ import java.util.StringTokenizer;
 /*
 	날짜: 2025/07/22
 	이름: 윤종인
-	내용: 백준 8단계 3번 문제 - 세탁소 사장 동혁
+	내용: 백준 8단계 4번 문제 - 중앙 이동 알고리즘
 */
 
-public class Main3 {
+public class Main4 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int t = Integer.parseInt(br.readLine());
-		int[] arr = {25,10,5,1};
+		int a = 3;
+		int b = 1;
 		
-		for(int i=0;i<t;i++) {
-			int c = Integer.parseInt(br.readLine());
-			int[] arr2 = new int[arr.length];
-			for(int j=0;j<arr.length;j++) {
-				arr2[j] += c / arr[j];
-				c %= arr[j];
-			}
-			for(int item : arr2)
-				System.out.print(item + " ");
+		if(t == 1) {
+			System.out.println(a * a);
+		} else {
+			for(int i=0;i<t-1;i++) {
+				b *= 2;
+				a += b;
+			} 
+			System.out.println(a * a);
 		}
 	}
 }
