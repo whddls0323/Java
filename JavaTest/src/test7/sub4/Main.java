@@ -21,8 +21,8 @@ public class Main {
 		
 		article1.addComment(comment1);
 		article1.addComment(comment3);
-		article1.addComment(comment2);
-		article1.addComment(comment4);
+		article2.addComment(comment2);
+		article3.addComment(comment4);
 
 		board.addArticle(article1);
 		board.addArticle(article2);
