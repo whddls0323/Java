@@ -10,31 +10,31 @@ import java.util.StringTokenizer;
 /*
 	날짜: 2025/07/31
 	이름: 윤종인
-	내용: 백준 10단계 3번 문제 - 네 번째 점 
+	내용: 백준 10단계 5번 문제 - 대지  
 */
 
-public class Main3 {
+public class Main5 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		List<Integer> list1 = new ArrayList<>();
-		List<Integer> list2 = new ArrayList<>();
+		int n = Integer.parseInt(br.readLine());
+		int xMax = -10000,xMin = 10000;
+		int yMax = -10000,yMin = 10000;
 		
-		for(int i=0;i<3;i++) {
+		for(int i=0;i<n;i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int x = Integer.parseInt(st.nextToken());
 			int y = Integer.parseInt(st.nextToken());
 			
-			if(list1.contains(x))
-				list1.remove(Integer.valueOf(x));
-			else
-				list1.add(x);
-			
-			if(list2.contains(y))
-				list2.remove(Integer.valueOf(y));
-			else
-				list2.add(y);
+			if(xMin > x) 
+				xMin = x;
+			if(xMax < x) 
+				xMax = x;		
+			if(yMin > y) 
+				yMin = y;
+			if(yMax < y) 
+				yMax = y;
 		}
-		System.out.print(list1.get(0) + " ");
-		System.out.print(list2.get(0));
+
+		System.out.println((xMax - xMin) * (yMax - yMin));
 	}
 }
